@@ -1,4 +1,11 @@
 
+#include <stdio.h>
+
+
+struct stats
+{
+    float average, min, max;
+}
 struct Stats compute_statistics(const float* numberset, int setlength);
 
 typedef void (*alerter_funcptr)();
