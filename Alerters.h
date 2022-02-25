@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 
-uint emailAlerter(void);
-uint ledAlerter(void);
+int emailAlerter(void);
+int ledAlerter(void);
 typedef void (*alerter_funcptr)();
 
 
