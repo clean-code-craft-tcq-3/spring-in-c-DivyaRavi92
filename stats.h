@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 
-struct stats
+struct Stats
 {
     float average, min, max;
 };
