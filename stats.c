@@ -1,5 +1,8 @@
 #include "stats.h"
 
+extern int emailAlerter();
+extern int ledAlerter();
+
 int emailAlertCallCount = 0;
 int ledAlertCallCount = 0;
 struct Stats compute_statistics(const float* numberset, int setlength) {
@@ -15,7 +18,7 @@ struct Stats compute_statistics(const float* numberset, int setlength) {
     s.max = numberset[0];
     for(int i = 0; i < setlength; i++ )
     {
-        avg += *numberset[i];
+        avg += numberset[i];
         if (s.min > numberset[i]) 
         {
             s.min = numberset[i];
