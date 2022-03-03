@@ -3,8 +3,6 @@
 extern int emailAlerter();
 extern int ledAlerter();
 
-int emailAlertCallCount = 0;
-int ledAlertCallCount = 0;
 struct Stats compute_statistics(const float* numberset, int setlength) {
     struct Stats s;
     float avg = 0.0;
