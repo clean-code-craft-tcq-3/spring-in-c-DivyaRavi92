@@ -2,6 +2,7 @@
 
 #include "catch.hpp"
 #include "stats.h"
+#include "Alerters.h"
 
 #include <stdlib.h>
 #include <math.h>
@@ -20,7 +21,9 @@ TEST_CASE("average is NaN for empty array") {
     Stats computedStats = compute_statistics(0, 0);
     //All fields of computedStats (average, max, min) must be
     //NAN (not-a-number), as defined in math.h
-    
+    REQUIRE(computedStats.average == __FLT_HAS_QUIET_NAN__);
+    REQUIRE(computedStats.max == __FLT_HAS_QUIET_NAN__);
+    REQUIRE(computedStats.min == __FLT_HAS_QUIET_NAN__);
     //Design the REQUIRE statement here.
     //Use https://stackoverflow.com/questions/1923837/how-to-use-nan-and-inf-in-c
 }
