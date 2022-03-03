@@ -3,5 +3,5 @@
 
 int emailAlerter(void);
 int ledAlerter(void);
-typedef void (*alerter_funcptr)();
+typedef int (*alerter_funcptr)();
 
